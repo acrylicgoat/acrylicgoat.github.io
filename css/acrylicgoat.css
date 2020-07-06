@@ -5,23 +5,25 @@
     background-size: cover;
   }
 
-html,
-body {
+  html,
+  body {
     height: 100%;
-    margin-bottom: 60px;
-}
-
-#page-content {
+  }
+  
+  #page-content {
     flex: 1 0 auto;
+  }
+  
+  #sticky-footer {
+    flex-shrink: none;
+  }
+
+.row > div[class*='col-'] {
+    display: flex;
+    flex:1 0 auto;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.row {
+.row2 {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
@@ -54,5 +56,9 @@ body {
       max-width: 100%;
     }
   }
+
+.footer-pad {
+    height: 50px;
+}
 
   
