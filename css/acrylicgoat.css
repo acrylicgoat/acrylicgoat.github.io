@@ -18,10 +18,10 @@
     flex-shrink: none;
   }
 
-.row > div[class*='col-'] {
+/*.row > div[class*='col-'] {
     display: flex;
     flex:1 0 auto;
-}
+}*/
 
 .row2 {
     display: flex;
@@ -39,6 +39,10 @@
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.header0 {
+    background-color: #009999 !important;
 }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -60,5 +64,13 @@
 .footer-pad {
     height: 50px;
 }
+
+#footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
 
   
