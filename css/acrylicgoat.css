@@ -5,6 +5,13 @@
     background-size: cover;
   }
 
+  .jumbotron-about {
+    background-image: url('../images/about.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   html,
   body {
     height: 100%;
@@ -17,11 +24,6 @@
   #sticky-footer {
     flex-shrink: none;
   }
-
-/*.row > div[class*='col-'] {
-    display: flex;
-    flex:1 0 auto;
-}*/
 
 .row2 {
     display: flex;
