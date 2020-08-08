@@ -73,6 +73,21 @@
     flex-wrap: wrap;
 }
 
+.eightb-font{
+    font-family: 'Aldrich', sans-serif;
+}
+
+.header-font{
+    font-family: 'Audiowide', cursive;
+}
+
+.secondary-font{
+    font-family: 'Cinzel', serif;
+}
+
+.text-font{
+    font-family: 'Open Sans', sans-serif;
+}
 
 
   
