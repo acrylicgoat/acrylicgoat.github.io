@@ -8,16 +8,16 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Audiowide&family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/ag_theme.css">
+        <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Audiowide&family=Cinzel&family=Open+Sans&family=Nunito:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/acrylicgoat.css">
     </head>
     <body class="d-flex flex-column">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
             <div class='container'>
                 <a class="navbar-brand header-font" href="#">
-                    <img src="./images/acrylicgoat-horns-xsm.png" width="30" height="30" alt="" loading="lazy">
-                    Acrylic Goat
+                    <img src="./images/transparent-5-logo.png" width="30" height="30" alt="" loading="lazy">
+                    acrylic goat
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,15 +44,14 @@
         <div id="page-content">
 
             <div class="container mt-2" id="home-container">
-                <div class="jumbotron text-center">
-                <h1 class="display-4 text-center text-white header-font">Acrylic Goat Software</h1>
-                <p class="lead text-center text-white text-font">Ed Woodward - Software Engineer</p>
-                <hr class="my-4">
-                <p class="text-center  text-white text-font">Android, Python, Ruby on Rails and Javascript development </p>
-                </div>
+                <div class="jumbotron text-center"/>
+            </div>
+
+            <div class="container mt-2" id="yarn-container">
+                <div class="jumbotron-yarn text-center"/>
             </div>
             
-            <div class="text-center text-font">
+            <div class="mt-3 text-center text-font">
                 <h4>I love writing code and solving problems. Here are some of my projects. </h4>
             </div>
 
@@ -191,7 +190,7 @@
                                 <p class="card-text text-center"><strong>Houston Bicycle Museum</strong></p>
                                 <p class="card-text">Displayed some of the bikes in the museum collection</p>
                                 <ul>
-                                    <li>Included general information about the museum</li>
+                                    <li>Included information about the museum</li>
                                     <li>Museum is closed until futher notice</li>
                                 </ul>
                                 <p class='text-center'>
@@ -215,7 +214,7 @@
                 <div class="p-3 mb-2 bg-secondary text-white">
                     <h3 class='text-center text-font'>OpenStax Repos</h3>
                 </div>
-                <div class="text-center">
+                <div class="mt-5 mb-5 text-center">
                     <h4>I contributed to these repos using Python, Ruby on Rails and Javascript.
                     </h4>
                 </div>
@@ -242,8 +241,8 @@
                             <div class="card-body">
                             <h5 class="card-title">Django app and SPA Frontend</h5>
                             <p class="card-text">Main site for OpenStax</p>
-                            <a href="https://github.com/openstax/openstax-cms" class="btn btn-outline-secondary">Django app on Gitbub</a>
-                            <a href="https://github.com/openstax/os-webview" class="btn btn-outline-secondary">Frontend on Gitbub</a>
+                            <a href="https://github.com/openstax/openstax-cms" class="btn btn-outline-secondary">Django app on Github</a>
+                            <a href="https://github.com/openstax/os-webview" class="btn btn-outline-secondary">Frontend on Github</a>
                             </div>
                         </div>
                     </div>
@@ -257,7 +256,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Ruby on Rails app with Rails templates for Frontend</h5>
                             <p class="card-text">Used for oauth login into OpenStax sites</p>
-                            <a href="https://github.com/openstax/accounts" class="btn btn-outline-secondary">Gitbub</a>
+                            <a href="https://github.com/openstax/accounts" class="btn btn-outline-secondary">Github</a>
                             </div>
                         </div>
                     </div>
@@ -271,8 +270,22 @@
                             <div class="card-body">
                             <h5 class="card-title">OpenStax gems in Rubygems</h5>
                             <p class="card-text">Used on several OpenStax sites to access Salesforce data</p>
-                            <a href="https://github.com/openstax/openstax_salesforce" class="btn btn-outline-secondary">openstax-salesforce gem on Gitbub</a>
-                            <a href="https://github.com/openstax/active_force" class="btn btn-outline-secondary">active_force gem on Gitbub</a>
+                            <a href="https://github.com/openstax/openstax_salesforce" class="btn btn-outline-secondary">openstax_salesforce gem on Github</a>
+                            <a href="https://github.com/openstax/active_force" class="btn btn-outline-secondary">active_force gem on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='container'>
+                    <div class="mb-3 mt-3">
+                        <div class="card shadow">
+                            <div class="card-header bg-secondary text-white">
+                                Salesforce API App
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Middleware written in Ruby on Rails for retrieving and updating Salesforce Data</h5>
+                                <p class="card-text">Used on several OpenStax sites to access Salesforce data</p>
+                                <a href="https://github.com/openstax/openstax-salesforce-api" class="btn btn-outline-secondary">openstax-salesforce-api on Github</a>
                             </div>
                         </div>
                     </div>
@@ -286,7 +299,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Personal and professional Android apps</h5>
                             <p class="card-text">Written in Java and Kotlin</p>
-                            <a href="#android" class="btn btn-outline-success">Android Apps</a>
+                            <a href="#android" class="btn btn-outline-secondary">Android Apps</a>
                             </div>
                         </div>
                     </div>
@@ -303,7 +316,7 @@
             </div>
             <div class="container mt-2" id="about">
                 <div class="jumbotron-about text-center">
-                <h1 class="display-4 text-center text-white eightb-font">About Ed</h1>
+                <h1 class="display-4 text-center about-font">About Ed</h1>
                 
                 
                 
@@ -312,7 +325,7 @@
             <div class='container mb-5'>
                 <div class='text-font'>
                     <ul>
-                        <li>I am currently a programmer at OpenStax at Rice University doing development in Python, Ruby and Javascript</li>
+                        <li>I am currently a software engineer at OpenStax at Rice University doing development in Python, Ruby and Javascript</li>
                         <li>I have many years of combined experience in development, team lead and engineering management </li>
                         <li>I'm developing Android apps on the side using Java and Kotlin</li>
                         <li>I love learning new ideas and technologies</li>
@@ -332,9 +345,9 @@
         </div>
         <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
             <div class="container text-center text-white" id="footer-container">
-                <span class='float-left'><a href="https://twitter.com/acrylicgoat" <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Acrylic Goat Twitter</span></a></i></span>
-                <small class="text-font">Copyright &copy; 2020 Ed Woodward</small>
-                <span class='float-right'><a href="https://twitter.com/edwoodward" <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Ed Woodward Twitter</span></a></i></span>
+                <span class='float-left'><a href="https://twitter.com/acrylicgoat"/> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Acrylic Goat Twitter</span></a></i></span>
+                <small class="text-font">Copyright &copy; 2021 Ed Woodward</small>
+                <span class='float-right'><a href="https://twitter.com/edwoodward"/> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Ed Woodward Twitter</span></a></i></span>
             </div>
         </footer>
         
