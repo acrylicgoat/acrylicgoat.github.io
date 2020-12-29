@@ -1,25 +1,101 @@
-.jumbotron {
-    background-image: url('../images/header-logo-2-black-bg.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 375px;
-  }
-
-.jumbotron-yarn {
-    background-image: url('../images/hero-image-4.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px;
-}
-
   .jumbotron-about {
     background-image: url('../images/about.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+@media only screen and (min-width: 47.9em) {
+    .jumbotron-header {
+        background-image: url('../images/header-logo-2-black-bg.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 220px;
+        width: 100%;
+    }
+
+    .jumbotron-yarn {
+        background-image: url('../images/hero-image-4.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*height: 550px;*/
+        /*min-height: 300px;*/
+        height: 375px;
+        width: 100%;
+        /*height: auto;*/
+    }
+}
+
+@media only screen and (min-width: 33.9em) {
+    .jumbotron-header {
+        background-image: url('../images/header-logo-2-black-bg.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 220px;
+        width: 100%;
+    }
+
+    .jumbotron-yarn {
+        background-image: url('../images/hero-image-4.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*height: 550px;*/
+        /*min-height: 300px;*/
+        height: 375px;
+        width: 100%;
+        /*height: auto;*/
+    }
+}
+
+@media only screen and (min-width: 61.9em) {
+    .jumbotron-header {
+        background-image: url('../images/header-logo-2-black-bg.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+    }
+
+    .jumbotron-yarn {
+        background-image: url('../images/hero-image-4.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 550px;
+        /*min-height: 300px;*/
+        /*height: 375px;*/
+        width: 100%;
+        /*height: auto;*/
+    }
+}
+
+@media only screen and (min-width: 74.9em) {
+    .jumbotron-header {
+        background-image: url('../images/header-logo-2-black-bg.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+    }
+
+    .jumbotron-yarn {
+        background-image: url('../images/hero-image-4.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 550px;
+        /*min-height: 300px;*/
+        /*height: 375px;*/
+        width: 100%;
+        /*height: auto;*/
+    }
+}
 
   html,
   body {
