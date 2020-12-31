@@ -7,12 +7,13 @@
 
 @media only screen and (min-width: 47.9em) {
     .jumbotron-header {
-        background-image: url('../images/header-logo-2-black-bg.png');
+        background-image: url('../images/header-logo-2-black-bg-sm.png');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 220px;
         width: 100%;
+        display: block;
     }
 
     .jumbotron-yarn {
@@ -25,15 +26,17 @@
         height: 375px;
         width: 100%;
         /*height: auto;*/
+        display: block;
     }
 }
 
 @media only screen and (min-width: 33.9em) {
     .jumbotron-header {
-        background-image: url('../images/header-logo-2-black-bg.png');
+        background-image: url('../images/header-logo-2-black-bg-sm.png');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        min-height: 220px;
         height: 220px;
         width: 100%;
     }
@@ -44,7 +47,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         /*height: 550px;*/
-        /*min-height: 300px;*/
+        min-height: 300px;
         height: 375px;
         width: 100%;
         /*height: auto;*/
@@ -67,7 +70,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 550px;
-        /*min-height: 300px;*/
+        min-height: 300px;
+        min-width: 300px;
         /*height: 375px;*/
         width: 100%;
         /*height: auto;*/
@@ -90,7 +94,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 550px;
-        /*min-height: 300px;*/
+        min-height: 300px;
         /*height: 375px;*/
         width: 100%;
         /*height: auto;*/
@@ -152,10 +156,11 @@
     height: 50px;
 }
 
-#footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
 }
 
 .eightb-font{
@@ -163,7 +168,12 @@
 }
 
 .header-font{
-    font-family: 'Nunito', cursive;
+    font-family: 'Nunito', sans-serif;
+}
+
+.title-font{
+  font-family: 'Nunito', sans-serif;
+    font-size: 4.0em
 }
 
 .secondary-font{
@@ -176,8 +186,10 @@
 
 .about-font {
     font-family: 'Aldrich', sans-serif;
-    color: #00ff6c
+    color: #00ff6c;
 }
+
+.bold-text   { font-weight: bold !important; }
 
 
   
