@@ -192,7 +192,7 @@ footer {
 .bold-text   { font-weight: bold !important; }
 
 .bottom-margin {
-    margin-bottom: 5em;
+    margin-bottom: 5em !important;
 }
 
 
