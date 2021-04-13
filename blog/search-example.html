@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acrylic Goat Software Blog">
+    <meta name="description" content="Simple Rails search API example">
     <title>Acrylic Goat Software Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -45,82 +45,50 @@
 
 <div id="page-content" class="bottom-margin">
     <div class="col-12 mt-3">
-        <div class="text-center"> <img style="height:200px; width:200px" src="../images/black-bg-neon-sm.png"/><p class="title-font">acrylic goat blog</p></div>
+        <div class="text-center"> <img style="height:200px; width:200px" src="../images/black-bg-neon-sm.png"/>
+            <p class="title-font">Simple Rails search API</p>
+            <p class="text-center text-font">April 12, 2021</p>
+        </div>
     </div>
-    <div class="container mb-5 bg-light">
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        April 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./search-example.html">Simple Rails search API</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        March 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./writing-rspec-test-CORS.html">Writing an RSpec test for CORS</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        February 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./update-gem-rails-5-6.html">Update Gem to Work on Rails 5 and 6</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        January 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./updating-scrumnotes-sdk29.html">Updating Scrumnotes to SDK 29</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        December 2020
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./books-2020.html">Favorite Books in 2020</a></li>
-                            <li><a href="./welcome.html">Welcome to the Acrylic Goat Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="container mb-xl-n5">
+        <p>A simple search API that would allow a Frontend to update results as a user types. This example will search for schools.</p>
+        <p>First, add a search method to the School model</p>
+        <pre>
+            <code>
+                def self.search(name)
+                    where('name LIKE ?', "%#{name}%")
+                end
+            </code>
+        </pre>
+        <p>Next, add a search method to the Schools Controller</p>
+        <pre>
+            <code>
+                # GET /schools/search?name
+                def search
+                    @schools = School.search(params[:name])
+                    render json: @schools, status: :ok
+                end
+            </code>
+        </pre>
+        <p>Last, add the /search to the route</p>
+        <pre>
+            <code>
+                resources :schools do
+                    collection do
+                      get 'search'
+                    end
+                end
+            </code>
+        </pre>
+        <p>Now search using a full name of a school: <code>/schools/search?name=Test University</code></p>
+        <div class="mb-5">
+            <p>Or a partial name: <code>/schools/search?name=Test U</code></p>
         </div>
     </div>
 </div>
+
+
+</body>
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center text-white" id="footer-container">
         <span class='float-left'><a href="https://twitter.com/acrylicgoat"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Acrylic Goat Twitter</span></a></i></span>
@@ -128,8 +96,6 @@
         <span class='float-right'><a href="https://twitter.com/edwoodward"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Ed Woodward Twitter</span></a></i></span>
     </div>
 </footer>
-
-</body>
 
 
 </html>
