@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acrylic Goat Software Blog">
+    <meta name="description" content="Simple example of using Python reflection">
     <title>Acrylic Goat Software Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -45,96 +45,34 @@
 
 <div id="page-content" class="bottom-margin">
     <div class="col-12 mt-3">
-        <div class="text-center"> <img style="height:200px; width:200px" src="../images/black-bg-neon-sm.png"/><p class="title-font">acrylic goat blog</p></div>
+        <div class="text-center"> <img style="height:200px; width:200px" src="../images/black-bg-neon-sm.png"/>
+            <p class="title-font">Using Python Reflection</p>
+            <p class="text-center text-font">May 15, 2021</p>
+        </div>
     </div>
-    <div class="container mb-5 bg-light">
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        May 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./using-python-reflection.html">Using Python Reflection</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        April 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./search-example.html">Simple Rails search API</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        March 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./writing-rspec-test-CORS.html">Writing an RSpec test for CORS</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        February 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./update-gem-rails-5-6.html">Update Gem to Work on Rails 5 and 6</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        January 2021
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./updating-scrumnotes-sdk29.html">Updating Scrumnotes to SDK 29</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class="mb-3 mt-3">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        December 2020
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li><a href="./books-2020.html">Favorite Books in 2020</a></li>
-                            <li><a href="./welcome.html">Welcome to the Acrylic Goat Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="container mb-xl-n5">
+        <p>I recently had an issue that I was able to solve using Python reflection. I've used reflection in the past when writing Java and was happy to see that it was possible in Python. It fit this issue very well.</p>
+        <p>The problem was to determine if any of a known list of attributes was not being used by a Partner object. If an attribute is True, it is being used. To make the code more efficient, any attributes found could be removed from the attribute list so the check of the next partner was faster. The function I used was...</p>
+        <pre>
+            <code>
+                def check_field_names(self, partner, field_names):
+                    attributes_to_remove = []
+                    for attribute in field_names:
+                        attr_value = getattr(partner, str(attribute))
+                        if str(attr_value) == 'True':
+                            attributes_to_remove.append(attribute)
+                    return [x for x in field_names if x not in attributes_to_remove]
+            </code>
+        </pre>
+        <p>The code loops through the attribute names and checks if the partner has the attribute set to True. The reflection part is the line: <code>attr_value = getattr(partner, str(attribute))</code> . If the attribute is found, it is added to the <code>attributes_to_remove</code> and a list comprehension removes those items from the list and returns the shortened list to the calling function. </p>
+        <div class="mb-5">
+            <p>This was my first opportunity to use reflection in Python and it was a great solution to this problem.</p>
         </div>
     </div>
 </div>
+
+
+</body>
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center text-white" id="footer-container">
         <span class='float-left'><a href="https://twitter.com/acrylicgoat"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Acrylic Goat Twitter</span></a></i></span>
@@ -142,8 +80,6 @@
         <span class='float-right'><a href="https://twitter.com/edwoodward"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Ed Woodward Twitter</span></a></i></span>
     </div>
 </footer>
-
-</body>
 
 
 </html>
