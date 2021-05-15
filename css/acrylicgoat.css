@@ -195,5 +195,14 @@ footer {
     margin-bottom: 5em !important;
 }
 
+pre {
+    background: #c6dadc;
+}
+
+code {
+    align: left;
+    margin: 0;
+}
+
 
   
