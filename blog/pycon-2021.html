@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Highlights of Pycon 2021">
+    <title>Acrylic Goat Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Audiowide&family=Cinzel&family=Open+Sans&family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/acrylicgoat.css">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+</head>
+<body class="d-flex flex-column">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class='container'>
+        <a class="navbar-brand header-font" href="../index.html">
+            <img src="../images/transparent-5-logo.png" width="30" height="30" alt="" loading="lazy">
+            acrylic goat
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-font" href="../index.html#android">Android<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-font" href="../index.html#open-source">Open Source</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-font" href="../blog/ag-blog.html">Blog</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-font" href="../index.html#about">About Ed</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="page-content" class="bottom-margin">
+    <div class="col-12 mt-3">
+        <div class="text-center"> <img style="height:200px; width:200px" src="../images/black-bg-neon-sm.png"/>
+            <p class="title-font">Pycon 2021</p>
+            <p class="text-center text-font">July 17, 2021</p>
+        </div>
+    </div>
+    <div class="container mb-xl-n5">
+        <p>I was fortunate enough to be able to virtually attend Pycon this year. It has been a long time since I have attended a technical conference not related to Android and I really enjoyed it. These are some of the highlights I took away from it.</p>
+        <p>
+            <strong>Keynote by Robert Erdmann from the Rijks Museum in Amsterdam.</strong> Robert detailed an amazing project
+            called Operation Night Watch. The museum is making macro images of the 14 ft by 12 ft Night Watch painting by
+            Rembrandt. The idea is to be able to view the detail of the painting at an ultra high resolution (700+ gigapixels,
+            resolution of 5 microns). I won't go into all of the details, but there are several technical hurdles they had to
+            overcome to make the project happen. The museum has <a href="https://www.rijksmuseum.nl/en/whats-on/exhibitions/operation-night-watch">some technical details</a>
+            and there is a <a href="http://hyper-resolution.org/view.html?pointer=0.794,0.000&i=Rijksmuseum/SK-C-5/SK-C-5_VIS_20-um_2019-12-21">lower resolution version</a>
+            of the image you can play with. I highly recommend <a href="https://www.youtube.com/watch?v=z_hm5oX7ZlE">watching the
+            keynote.</a>
+        </p>
+        <p>
+            <strong>Writing Good Developer Docs by Meredydd Luff.</strong> <a href="https://www.youtube.com/watch?v=eWaWvUhpseM">The talk</a> covered a bit about using Jupyter notebooks for
+            documentation which was why I originally attended. However there were some excellent points about documentation.
+            <ul>
+                <li>There are 2 kinds of documentation: Studying and Working. Most developers are looking for Working
+                    documentation such as How Tos or Reference documentation.</li>
+                <li>When someone reads your documentation and then asks a question, that is a bug report on your
+                    documentation. The answer is the patch to your documentation.</li>
+                <li>Reference docs tell a story. API documentatioon describes code</li>
+                <li>Your docs are your user interface for other developers</li>
+            </ul>
+        </p>
+        <p>
+            <strong>Unexpected Execution: Wild Ways Code Execution can Occur in Python by Graham Bleaney and Ibrahim Mohamed.</strong> They talked about their work at Facebook
+            developing an open source static analysis tool for Python, <a href="https://engineering.fb.com/2020/08/07/security/pysa/">Pysa</a>. They went through several real
+            world examples covering deserialization, input, string formatting among others. Being a former Java developer, I have used static analysis in the past and found it useful.
+            I will be checking out Pysa and doing some further studying of their examples.
+        </p>
+        <div class="mb-5">
+            <p>These are just a few of the talks I enjoyed. The <a href="https://www.youtube.com/channel/UCMjMBMGt0WJQLeluw6qNJuA">Pycon session videos</a> are now available and I
+                highly recommend checking them out.</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center text-white" id="footer-container">
+        <span class='float-left'><a href="https://twitter.com/acrylicgoat"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Acrylic Goat Twitter</span></a></i></span>
+        <small class="text-font">Copyright &copy; 2021 Ed Woodward</small>
+        <span class='float-right'><a href="https://twitter.com/edwoodward"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Ed Woodward Twitter</span></a></i></span>
+    </div>
+</footer>
+
+
+</html>
