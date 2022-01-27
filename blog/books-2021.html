@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Writing a simple test for CORS using RSpec">
+    <meta name="description" content="My favorite books from 2021">
     <title>Acrylic Goat Software Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -46,54 +46,48 @@
 <div id="page-content" class="bottom-margin">
     <div class="col-12 mt-3">
         <div class="text-center"> <img style="height:200px; width:200px" src="../images/black-bg-neon-sm.png"/>
-            <p class="title-font">Writing an RSpec test for CORS</p>
-            <p class="text-center text-font">March 6, 2021</p>
+            <p class="title-font">Favorite Books in 2021</p>
+            <p class="text-center text-font">January 22, 2022</p>
         </div>
-    </div>
-    <div class="container mb-xl-n5">
-        <p>I recently had to add CORS handling to an application. I used the rack-cors gem which made it somewhat easy. When it came to writing Rspec tests,
-            I had difficulty figuring out how to how to structure it. This is what I came up with.</p>
-        <p>My <code>config/initializers/cors.rb</code> file has a section for www.example.com so all of the Rspec tests will pass.</p>
-        <pre>
-            <code>
-                allow do
-                  origins 'www.example.com'
-                  resource '*',
-                       headers: :any,
-                       methods: [:get, :post, :put, :patch, :delete, :options, :head],
-                       credentials: true
-                end
-            </code>
-        </pre>
-        <p>I wrote one test that passed CORS successfully and one that failed.</p>
-        <pre>
-            <code>
-                RSpec.describe "CORS", type: :request do
-                  it "allows the request" do
-                    headers = { "HTTP_ORIGIN" => "http://www.example.com" }
-                    post "/api/v1/opportunities", :headers => headers
-                    expect(response.headers["Access-Control-Allow-Methods"]).to eq("GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD")
-                    expect(response.headers["Access-Control-Allow-Origin"]).to eq('http://www.example.com')
-                  end
+        <div class="container">
+            <p>Last year, my reading was a little different. I read more books (36 vs 16) and less graphic novels (59 vs 65) than the previous year.
+             I read most of the books using the Hoopla and Libby apps on my
+            Android tablet. </p>
+            <p>The books I enjoyed the most were</p>
+            <ul>
+                <li><span class="font-weight-bold">Laika - Graphic Novel</span></li>
+                <p>I heard about this book from Marvel comic writer, Dan Slott. It is about the famous dog that
+                    was launched inside Sputnik 2. The account is from the point of view of the woman who trained
+                Laika and is mostly fictional. The book is heartbreaking, but done with excellent story telling</p>
+                <li><span class="font-weight-bold">Resident Alien vol. 6 - Graphic Novel</span></li>
+                <p>This is the last volume of the Resident Alien series. The series is about an alien that crashes on
+                earth and takes up the disguise as the town doctor in Patience, Washington. The book ties up several loose
+                    ends from the previous volumes. It also lacks the mystery element that the other volumes have, but
+                It is an excellent closing of the series. If you saw the SyFy series by the same name, I recommend
+                reading the graphic novels it is based on. They are very different and much better than the series.</p>
+                <li class="font-weight-bold">Androids by Chet Hasse</li>
+                <p>Chet Hasse is well known in the Android community for his podcast, Android Developers Backstage, and
+                for his presentations at many Android conferences. I've seen him talk at the Big Android BBQ and
+                Android Dev Summit. This book captures the early history of Android at Google in the form of interviews with
+                the developers who built it. I love history and found this book interesting because of my interest in
+                Android and the fact that I know who many of the people in the book are. </p>
+                <li class="font-weight-bold">Duke: A Life of Duke Ellinton by Terry Teachout</li>
+                <p>Duke Ellinton has always been one of my favorite composers. I read his autobiography many years ago.
+                This book paints a totally different picture of Ellington. He didn't always give credit to the musicians
+                who composed parts of his most famous songs. He was a habitual womanizer and lived beyond his means
+                for most of his life. However, he was generous to the men in his band and tolerant of their many personal
+                issues and the difficulties they could cause. The book detailed his life, but also talked about the music
+                in detail. Duke was a complicated person and this book helps me put some perspective on his music.</p>
+                <li class="font-weight-bold">Queen of Bebop: The Musical Lives of Sarah Vaughn by Elaine M. Hayes</li>
+                <p>Another book about one of my musical idols. I think Sarah Vaughn is one of the best Jazz singers ever.
+                While the book covers her life outside music, I really enjoyed learning about recordings I was not aware of
+                and the stories behind them.</p>
 
-                  it "denies the request" do
-                    headers = { "HTTP_ORIGIN" => "http://www.badexample.com" }
-                    post "/api/v1/opportunities", :headers => headers
-                    expect(response.headers).not_to include("Access-Control-Allow-Methods")
-                    expect(response.headers).not_to include("Access-Control-Allow-Origin")
-                  end
-                end
-            </code>
-        </pre>
-        <div class="mb-5">
-            <p>These are basic tests that do not fully test the functionality, but it confirms that CORS is being handled.
-                I also manually tested the implementation using fetch() and XHR. </p>
+            </ul>
         </div>
     </div>
+
 </div>
-
-
-</body>
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center text-white" id="footer-container">
         <span class='float-left'><a href="https://twitter.com/acrylicgoat"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Acrylic Goat Twitter</span></a></i></span>
@@ -101,6 +95,8 @@
         <span class='float-right'><a href="https://twitter.com/edwoodward"></a> <i class="fa fa-twitter"><span class="text-white text-font">&nbsp;Ed Woodward Twitter</span></a></i></span>
     </div>
 </footer>
+
+</body>
 
 
 </html>
